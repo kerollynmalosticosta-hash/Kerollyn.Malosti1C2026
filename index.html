@@ -1,268 +1,3 @@
-from weasyprint import HTML
-
-html_content = """
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>E-book / Guia do Blog: Nail Design</title>
-    <style>
-        @page {
-            size: A4;
-            margin: 18mm 15mm;
-            background-color: #faf6f6;
-            @bottom-right {
-                content: counter(page);
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                font-size: 9pt;
-                color: #b5838d;
-            }
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #4a4a4a;
-            line-height: 1.6;
-            font-size: 11pt;
-        }
-
-        h1, h2, h3 {
-            color: #6d597a;
-            font-weight: 600;
-        }
-
-        h2 {
-            font-size: 16pt;
-            border-left: 5px solid #e56b6f;
-            padding-left: 10px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            page-break-after: avoid;
-        }
-
-        h3 {
-            font-size: 12pt;
-            color: #b5838d;
-            margin-top: 20px;
-            margin-bottom: 8px;
-            page-break-after: avoid;
-        }
-
-        p {
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-
-        ul {
-            margin-top: 5px;
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        .bold-lead {
-            font-weight: bold;
-            color: #352f44;
-        }
-
-        /* Capa / Cabeçalho Principal */
-        .main-header {
-            background-color: #6d597a;
-            color: #ffffff;
-            margin: -18mm -15mm 25px -15mm;
-            padding: 30px 15mm;
-            text-align: center;
-        }
-
-        .main-header h1 {
-            color: #ffffff;
-            font-size: 22pt;
-            margin: 0 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .main-header p {
-            color: #eaac8b;
-            font-size: 12pt;
-            margin: 0;
-            text-align: center;
-            font-style: italic;
-        }
-
-        /* Grid simulado para tendências e formatos usando tabelas (Weasyprint-safe) */
-        .content-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 12px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .content-table td {
-            background-color: #ffffff;
-            border-radius: 6px;
-            padding: 15px;
-            vertical-align: top;
-            border: 1px solid #e8dbdb;
-            width: 50%;
-        }
-
-        /* Alerta de saúde */
-        .alert-box {
-            background-color: #fceade;
-            border-left: 5px solid #e56b6f;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 6px 6px 0;
-            page-break-inside: avoid;
-        }
-
-        .alert-box h3 {
-            color: #e56b6f;
-            margin-top: 0;
-        }
-
-        .color-badge {
-            display: inline-block;
-            padding: 2px 8px;
-            background-color: #eaac8b;
-            color: #ffffff;
-            border-radius: 4px;
-            font-size: 9pt;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        .ux-tag {
-            font-size: 9pt;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #b5838d;
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: block;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="main-header">
-        <h1>Guia Completo de Conteúdo: Nail Design</h1>
-        <p>Textos Estruturados para Blog, Redes Sociais e Engajamento de Clientes</p>
-    </div>
-
-    <span class="ux-tag">Artigo 1 • Ideal para Página "Sobre" ou Post Fixo</span>
-    <h2>1. O que faz uma Nail Designer? (Guia para Iniciantes)</h2>
-    <p class="bold-lead">Se você acha que o trabalho de uma profissional das unhas se resume a tirar cutícula e passar esmalte, prepare-se para mudar de ideia!</p>
-    <p>A Nail Designer é, literalmente, uma designer de unhas. É uma profissão que mistura estética, saúde e muita arte. Enquanto a manicure tradicional foca no cuidado básico e na esmaltação das unhas naturais, a Nail Designer vai muito além através de pilares especializados:</p>
-    
-    <ul>
-        <li><strong>Alongamentos personalizados:</strong> Transforma unhas curtas ou roídas usando técnicas modernas e materiais avançados (gel, fibra de vidro, acrílico).</li>
-        <li><strong>Visagismo das mãos:</strong> Analisa o formato dos dedos, a anatomia das unhas e o estilo de vida da cliente para recomendar o melhor tamanho e formato.</li>
-        <li><strong>Nail Art:</strong> Atua como uma verdadeira artista plástica em miniatura, criando desenhos autorais, aplicações de pedrarias e efeitos únicos.</li>
-    </ul>
-    
-    <p><strong>Resumo:</strong> É a profissional que une técnica rigorosa e criatividade para elevar a autoestima de qualquer pessoa através do poder das mãos.</p>
-
-    <span class="ux-tag" style="margin-top: 25px;">Artigo 2 • Post Altamente Visual & Tendências</span>
-    <h2>2. Tendências de Nail Art que estão bombando nas redes</h2>
-    <p>Se você adora rolar o feed do Instagram ou do TikTok, já deve ter percebido que as unhas viraram o acessório fashion do momento. As tendências mudam rápido, mas algumas vieram para ficar. Olha só o que está em alta no mercado:</p>
-
-    <table class="content-table">
-        <tr>
-            <td>
-                <h3>Efeito Cromado (Glazed Donut)</h3>
-                <p>Aquela unha com um brilho perolado e futurista que parece uma cobertura de doce. Ficou famosa com as celebridades e combina perfeitamente com qualquer look.</p>
-                <span class="color-badge">Sucesso no TikTok</span>
-            </td>
-            <td>
-                <h3>Aura Nails</h3>
-                <p>Unhas que imitam a "energia" da aura, apresentando um degradê circular suave no centro da unha. Geralmente mistura tons vibrantes ou tons pastéis.</p>
-                <span class="color-badge">Visual Moderno</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Francesinha Revisitada</h3>
-                <p>Esqueça o traço branco tradicional. A moda agora é apostar na francesinha colorida, dupla, metalizada ou finalizada no moderno formato em "V".</p>
-                <span class="color-badge">Fashion</span>
-            </td>
-            <td>
-                <h3>Minimalismo Chic</h3>
-                <p>Pontinhos estratégicos, linhas finas abstratas e bases bem naturais (tons de nude e transparências) para quem curte algo discreto, elegante e contemporâneo.</p>
-                <span class="color-badge">Sofisticado</span>
-            </td>
-        </tr>
-    </table>
-
-    <div style="page-break-before: auto;"></div>
-    <span class="ux-tag" style="margin-top: 15px;">Artigo 3 • Guia Interativo de Estilo</span>
-    <h2>3. Formatos de Unha: Almond, Stiletto, Quadrada e como escolher o seu</h2>
-    <p>O formato escolhido para a unha muda completamente o visual e a proporção das mãos. Conheça os quatro modelos mais pedidos nos salões e descubra qual combina melhor com você:</p>
-
-    <table class="content-table">
-        <tr>
-            <td>
-                <h3>Quadrada (Square)</h3>
-                <p>O clássico dos clássicos. Tem as laterais e a ponta totalmente retas.</p>
-                <p><strong>Para quem é:</strong> Ideal para quem tem dedos longos e finos. Exige um pouco mais de cuidado nas pontas para não lascar no dia a dia.</p>
-            </td>
-            <td>
-                <h3>Almond (Amendoada)</h3>
-                <p>Tem a base mais larga e vai afinando suavemente até a ponta, lembrando o formato de uma amêndoa.</p>
-                <p><strong>Para quem é:</strong> Perfeita para quem quer alongar visualmente dedos curtos. Além de elegante, é muito prática e não quebra fácil.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Stiletto</h3>
-                <p>Super ousada e pontiaguda, inspirada nos icônicos saltos altos finos. É a favorita das divas pop.</p>
-                <p><strong>Para quem é:</strong> Para quem quer atitude. Requer unhas mais longas (geralmente alongamento estruturado) para manter a firmeza.</p>
-            </td>
-            <td>
-                <h3>Bailarina (Ballerina)</h3>
-                <p>Lembra o formato de uma sapatilha de balé: vai afinando em direção à ponta, mas termina com um corte totalmente reto.</p>
-                <p><strong>Para quem é:</strong> Uma ótima alternativa para quem gosta de unhas compridas e quer fugir do óbvio com modernidade.</p>
-            </td>
-        </tr>
-    </table>
-
-    <span class="ux-tag" style="margin-top: 25px;">Artigo 4 • Alerta de Saúde e Estética</span>
-    <h2>4. Os perigos de remover o alongamento em casa</h2>
-    <p>Quem nunca olhou para o alongamento crescendo, bateu aquela ansiedade e deu vontade de arrancar com o dente ou com a espátula? <strong>Não faça isso!</strong></p>
-    
-    <p>A remoção incorreta do gel ou da fibra de vidro é a principal causa de unhas fracas e danificadas, e não o procedimento de alongamento em si. Quando você arranca o produto à força, acaba descascando junto as camadas superiores da sua queratina natural.</p>
-
-    <div class="alert-box">
-        <h3>O que acontece se você arrancar em casa?</h3>
-        <ul>
-            <li>A unha natural fica fina como papel e extremamente dolorida ao toque.</li>
-            <li>Podem surgir manchas brancas profundas e descamação severa.</li>
-            <li>A região fica fragilizada e altamente exposta a fungos e bactérias.</li>
-        </ul>
-    </div>
-
-    <p><strong>A solução correta:</strong> A remoção segura deve ser feita exclusivamente pela Nail Designer no salão, utilizando lixas elétricas profissionais específicas ou produtos próprios que dissolvem o material sem agredir a sua matriz biológica. Paciência e cuidado com a saúde são fundamentais!</p>
-
-</body>
-</html>
-"""
-
-with open("guia_nail_designer.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
-
-HTML("guia_nail_designer.html").write_pdf("guia_nail_designer.pdf")
-print("PDF gerado com sucesso!")
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -343,3 +78,154 @@ print("PDF gerado com sucesso!")
             color: var(--primary);
             font-size: 28px;
             border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilização dos Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 3px solid var(--accent);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        /* Caixa de Alerta de Saúde */
+        .danger-zone {
+            background-color: #F5E6E8;
+            border-left: 4px solid #B51A2B;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .danger-zone h3 {
+            color: #B51A2B;
+            margin-top: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            margin-top: 30px;
+            transition: background 0.3s;
+            border: 1px solid var(--primary);
+        }
+
+        .cta-button:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button class="tab-link active" onclick="openTab(event, 'conceito')">O que faz</button>
+            <button class="tab-link" onclick="openTab(event, 'tendencias')">Tendências</button>
+            <button class="tab-link" onclick="openTab(event, 'formatos')">Formatos</button>
+            <button class="tab-link" onclick="openTab(event, 'cuidados')">Cuidados</button>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <div id="conceito" class="tab-content active">
+            <h2>A Arte da Nail Design</h2>
+            <p>Muito além da manicure tradicional, a atuação de uma <strong>Nail Designer</strong> funde saúde, engenharia estrutural e expressão artística. O foco não se limita a esmaltar, mas sim a esculpir e arquitetar o visual das mãos.</p>
+            <p>Através do visagismo personalizado, cada formato e comprimento são meticulosamente planejados para harmonizar com a anatomia dos seus dedos e refletir a sua identidade pessoal.</p>
+            <a href="https://wa.me/seu-numero" class="cta-button" target="_blank">Agendar Consultoria de Estilo</a>
+        </div>
+
+        <div id="tendencias" class="tab-content">
+            <h2>O Termômetro das Redes: Alta Costura em Unhas</h2>
+            <p>As unhas consolidaram-se como o acessório definitivo da moda contemporânea. Mantenha seu estilo alinhado às estéticas internacionais mais requisitadas:</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Efeito Cromado</h3>
+                    <p>Acabamento perolado de alto brilho que dominou as tendências de luxo globais.</p>
+                </div>
+                <div class="card">
+                    <h3>Aura Nails</h3>
+                    <p>Transições suaves em degradês circulares que traduzem dinamismo e modernidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Minimalismo Chic</h3>
+                    <p>Geometria milimétrica e traços abstratos sobre bases totalmente nuas e translúcidas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="formatos" class="tab-content">
+            <h2>Arquitetura dos Formatos</h2>
+            <p>A escolha do formato correto é a base estrutural para alongar e valorizar a expressão de suas mãos:</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Almond</h3>
+                    <p>Orgânica e refinada. Suas linhas suaves alongam visualmente os dedos e entregam alta durabilidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Stiletto</h3>
+                    <p>Audaciosa e geométrica. Uma declaração vanguardista e imponente de pura atitude.</p>
+                </div>
+                <div class="card">
+                    <h3>Bailarina</h3>
+                    <p>Moderna e simétrica. Extremidades afuniladas com terminação reta, o equilíbrio perfeito do design.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cuidados" class="tab-content">
+            <h2>Preservação & Saúde Biológica</h2>
+            <p>A integridade das suas unhas naturais deve ser tratada como prioridade máxima.</p>
+            <div class="danger-zone">
+                <h3>O Risco do Procedimento Doméstico</h3>
+                <p>Nunca remova ou force a retirada do alongamento em casa. Ao arrancar o material sintético sem o maquinário correto, as camadas de queratina natural são severamente danificadas, deixando a matriz fina, dolorida e exposta a patógenos.</p>
+            </div>
+            <p>A remoção segura exige instrumentação micrométrica profissional em mesa para dissolver e lixar o produto sem agredir seu corpo.</p>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
