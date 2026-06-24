@@ -263,3 +263,83 @@ with open("guia_nail_designer.html", "w", encoding="utf-8") as f:
 
 HTML("guia_nail_designer.html").write_pdf("guia_nail_designer.pdf")
 print("PDF gerado com sucesso!")
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerollyn Malosti | High-End Nail Design</title>
+    <style>
+        :root {
+            --bg-site: #FAF6F6;
+            --primary: #4A283D;
+            --accent: #D4A373;
+            --text: #333333;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-site);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        /* Menu Superior */
+        header {
+            background-color: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: #E2D4DD;
+            padding: 12px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover, nav button.active {
+            color: var(--white);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* Container do Conteúdo */
+        .main-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 28px;
+            border-bottom: 2px solid var(--accent);
