@@ -1,57 +1,44 @@
-<!-- Seção: O que faz uma Nail Designer -->
-<section id="sobre" class="guia-iniciante">
-  <h2>O que faz uma Nail Designer?</h2>
-  <p class="tagline">Guia para Iniciantes</p>
-  <div class="comparativo">
-    <div class="card">
-      <h3>Manicure Tradicional</h3>
-      <p>Cutilagem e esmaltação básica das unhas naturais.</p>
-    </div>
-    <div class="card destaque">
-      <h3>Nail Designer</h3>
-      <p>Especialista em alongamentos, arte personalizada e visagismo das mãos, transformando a estética completa da unha.</p>
-    </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Designer - Blog & Guia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<!-- Seção: Tendências (Visual) -->
-<section id="tendencias">
-  <h2>Bombando nas Redes</h2>
-  <div class="galeria-tendencias">
-    <!-- Aqui entrariam imagens ou carrosséis -->
-    <div class="trend-item" style="background-image: url('sua-foto.jpg')">
-      <span>Chrome Nails</span>
-    </div>
-    <div class="trend-item" style="background-image: url('sua-foto2.jpg')">
-      <span>Soft Aesthetic</span>
-    </div>
-  </div>
-</section>
+        /* Hero Header baseado na imagem */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1604654894610-df490651e56c?q=80&w=1920') no-repeat center center/cover;
+            min-height: 80vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 40px;
+            text-align: center;
+        }
 
-<!-- Seção Interativa: Formatos -->
-<section id="formatos">
-  <h2>Escolha seu Formato</h2>
-  <div class="grid-formatos">
-    <div class="formato-card">
-      <img src="almond.png" alt="Almond">
-      <h4>Almond</h4>
-      <p>Ideal para alongar dedos curtos.</p>
-    </div>
-    <div class="formato-card">
-      <img src="stiletto.png" alt="Stiletto">
-      <h4>Stiletto</h4>
-      <p>Ousado e moderno para quem quer destaque.</p>
-    </div>
-  </div>
-</section>
+        /* Topbar de Navegação */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
 
-<!-- Seção Educativa: Alerta -->
-<section id="educativo">
-  <div class="alerta-saude">
-    <h2>Os perigos de remover o alongamento em casa</h2>
-    <blockquote>
-      <strong>Atenção:</strong> A remoção incorreta pode causar o descolamento das camadas da unha natural, levando a fungos e enfraquecimento severo.
-    </blockquote>
-    <p>Sempre procure um profissional para a retirada segura.</p>
-  </div>
-</section>
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
