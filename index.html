@@ -1,280 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estilos & Unhas - Manicure e Pedicure</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<!-- Seção: O que faz uma Nail Designer -->
+<section id="sobre" class="guia-iniciante">
+  <h2>O que faz uma Nail Designer?</h2>
+  <p class="tagline">Guia para Iniciantes</p>
+  <div class="comparativo">
+    <div class="card">
+      <h3>Manicure Tradicional</h3>
+      <p>Cutilagem e esmaltação básica das unhas naturais.</p>
+    </div>
+    <div class="card destaque">
+      <h3>Nail Designer</h3>
+      <p>Especialista em alongamentos, arte personalizada e visagismo das mãos, transformando a estética completa da unha.</p>
+    </div>
+  </div>
+</section>
 
-        body {
-            background-color: #fcf8f8;
-            color: #333;
-            line-height: 1.6;
-        }
+<!-- Seção: Tendências (Visual) -->
+<section id="tendencias">
+  <h2>Bombando nas Redes</h2>
+  <div class="galeria-tendencias">
+    <!-- Aqui entrariam imagens ou carrosséis -->
+    <div class="trend-item" style="background-image: url('sua-foto.jpg')">
+      <span>Chrome Nails</span>
+    </div>
+    <div class="trend-item" style="background-image: url('sua-foto2.jpg')">
+      <span>Soft Aesthetic</span>
+    </div>
+  </div>
+</section>
 
-        /* --- HEADER --- */
-        header {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #f0d5d5;
-        }
+<!-- Seção Interativa: Formatos -->
+<section id="formatos">
+  <h2>Escolha seu Formato</h2>
+  <div class="grid-formatos">
+    <div class="formato-card">
+      <img src="almond.png" alt="Almond">
+      <h4>Almond</h4>
+      <p>Ideal para alongar dedos curtos.</p>
+    </div>
+    <div class="formato-card">
+      <img src="stiletto.png" alt="Stiletto">
+      <h4>Stiletto</h4>
+      <p>Ousado e moderno para quem quer destaque.</p>
+    </div>
+  </div>
+</section>
 
-        .header-title {
-            font-size: 24px;
-            color: #d46a75;
-            margin-bottom: 10px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #d46a75;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-            margin-top: 5px;
-            transition: background 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #b5535d;
-        }
-
-        /* --- CONTEÚDO PRINCIPAL / ARTICLE --- */
-        main {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .section-title h2 {
-            color: #444;
-            font-size: 28px;
-        }
-
-        .section-title p {
-            color: #777;
-            font-style: italic;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        article {
-            background: white;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        article h3 {
-            color: #d46a75;
-            margin-bottom: 15px;
-            font-size: 20px;
-            border-bottom: 1px solid #f5e6e6;
-            padding-bottom: 10px;
-        }
-
-        .service-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-            color: #666;
-        }
-
-        article p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .learn-more {
-            color: #d46a75;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .learn-more:hover {
-            text-decoration: underline;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #2c2c2c;
-            color: #fff;
-            padding: 40px 20px 20px 20px;
-            margin-top: 5px;
-        }
-
-        .footer-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            border-bottom: 1px solid #444;
-            padding-bottom: 20px;
-        }
-
-        .footer-brand h4 {
-            color: #d46a75;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .footer-brand p {
-            color: #bbb;
-            font-size: 14px;
-        }
-
-        .footer-links h5, .footer-contact h5 {
-            color: #fff;
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-links ul li a {
-            color: #bbb;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer-links ul li a:hover {
-            color: #d46a75;
-        }
-
-        .footer-contact p {
-            color: #bbb;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            color: #888;
-            font-size: 12px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1 class="header-title">Unhas Lindas, Autoestima lá em cima.</h1>
-        <p style="color: #888; font-size: 12px; margin-bottom: 10px;">Desde 2022</p>
-        <a href="#" class="cta-button">Agende Agora</a>
-    </header>
-
-    <main>
-        <div class="section-title">
-            <h2>Nossos Serviços</h2>
-            <p>Cuidados que fazem a diferença</p>
-        </div>
-
-        <div class="services-grid">
-            <article>
-                <div>
-                    <h3>Manicure</h3>
-                    <div class="service-icon">💅</div>
-                    <p>Cuidados completos para unhas naturais.</p>
-                </div>
-                <a href="#" class="learn-more">SAIBA MAIS ➔</a>
-            </article>
-
-            <article>
-                <div>
-                    <h3>Pedicure</h3>
-                    <div class="service-icon">👣</div>
-                    <p>Pés cuidados e unhas sempre bonitas.</p>
-                </div>
-                <a href="#" class="learn-more">SAIBA MAIS ➔</a>
-            </article>
-
-            <article>
-                <div>
-                    <h3>Alongamento e Arte</h3>
-                    <div class="service-icon">✨</div>
-                    <p>Unhas alongadas com segurança e naturalidade.</p>
-                </div>
-                <a href="#" class="learn-more">SAIBA MAIS ➔</a>
-            </article>
-
-            <article>
-                <div>
-                    <h3>Esmaltação em Gel</h3>
-                    <div class="service-icon">🎨</div>
-                    <p>Mais brilho, naturalidade e durabilidade.</p>
-                </div>
-                <a href="#" class="learn-more">SAIBA MAIS ➔</a>
-            </article>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h4>Estilos & Unhas</h4>
-                <p>Manicure</p>
-                <p>Beleza, cuidado e autoestima.</p>
-            </div>
-
-            <div class="footer-links">
-                <h5>Links Rápidos</h5>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Depoimentos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h5>Contato</h5>
-                <p>📞 (41) 98765-4321</p>
-                <p>📸 @estiloeunhas</p>
-                <p>📍 Curitiba - PR</p>
-                <br>
-                <h5>Horário de Atendimento</h5>
-                <p>Seg a Sex: 08h às 20h</p>
-                <p>Sáb: 08h às 15h</p>
-            </div>
-        </div>
-
-        <div class="copyright">
-            &copy; 2022 Estilo & Unhas Manicure. Todos os Direitos Reservados.
-        </div>
-    </footer>
-
-</body>
-</html>
+<!-- Seção Educativa: Alerta -->
+<section id="educativo">
+  <div class="alerta-saude">
+    <h2>Os perigos de remover o alongamento em casa</h2>
+    <blockquote>
+      <strong>Atenção:</strong> A remoção incorreta pode causar o descolamento das camadas da unha natural, levando a fungos e enfraquecimento severo.
+    </blockquote>
+    <p>Sempre procure um profissional para a retirada segura.</p>
+  </div>
+</section>
