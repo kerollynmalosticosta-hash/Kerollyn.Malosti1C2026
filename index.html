@@ -42,3 +42,238 @@
             color: white;
             text-decoration: none;
             margin-left: 20px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #a855f7;
+        }
+
+        .btn-add {
+            background-color: white;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Conteúdo Central */
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #e2e8f0;
+            margin-bottom: 40px;
+        }
+
+        /* Barra de Filtros / Abas estilo UX da imagem */
+        .search-container {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            max-width: 900px;
+            margin: 0 auto -40px auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-field {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-right: 1px solid #e2e8f0;
+            outline: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .search-field:last-of-type {
+            border-right: none;
+        }
+
+        .btn-search {
+            background-color: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-search:hover {
+            background-color: #6d28d9;
+        }
+
+        /* Seção de Conteúdo / Grid de Posts */
+        .main-content {
+            background-color: #f8fafc;
+            padding: 100px 40px 60px 40px;
+        }
+
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f3e8ff;
+            color: #6b21a8;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            color: #1e293b;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .card-text {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Estilo para o Alerta de Saúde (Blockquote) */
+        .alert-box {
+            background-color: #fff1f2;
+            border-left: 4px solid #f43f5e;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .alert-box p {
+            color: #9f1239;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 32px; }
+            .search-container { flex-direction: column; gap: 10px; margin-bottom: -60px; }
+            .search-field { border-right: none; border-bottom: 1px solid #e2e8f0; width: 100%; }
+            .btn-search { width: 100%; }
+            .topbar { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="topbar">
+            <div class="logo">NailStyle.</div>
+            <nav class="nav-links">
+                <a href="#">Início</a>
+                <a href="#">Explorar</a>
+                <a href="#">Tendências</a>
+                <a href="#" class="btn-add">Agendar Horário</a>
+            </nav>
+        </div>
+
+        <div class="hero-content">
+            <h1>Modelo de site para<br>Nail Designers / Estética</h1>
+            <p>Descubra técnicas, formatos, cuidados cruciais e as principais tendências que estão bombando nas redes.</p>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" class="search-field" placeholder="O que você está procurando? (Ex: Formatos, Cuidados)">
+        <input type="text" class="search-field" placeholder="Categoria de Art / Estilo">
+        <button class="btn-search">Buscar Guia</button>
+    </div>
+
+    <main class="main-content">
+        <div class="grid-container">
+
+            <article class="card">
+                <div class="card-body">
+                    <span class="tag">Página Sobre / Fixo</span>
+                    <h2 class="card-title">O que faz uma Nail Designer? (Guia para Iniciantes)</h2>
+                    <p class="card-text">
+                        Entenda o diferencial profissional: muito além da manicure tradicional, a designer de unhas é especialista em alongamentos avançados, aplicação de nail art personalizada e visagismo das mãos para harmonizar com o seu estilo.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-body">
+                    <span class="tag">Tendências Redes Sociais</span>
+                    <h2 class="card-title">Tendências de Nail Art que estão bombando nas redes</h2>
+                    <p class="card-text">
+                        Espaço altamente visual ideal para carrosséis de fotos. Explore paletas de cores vibrantes, efeitos cromados, texturas 3D e artes minimalistas que atraem o público jovem e antenado.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-body">
+                    <span class="tag">Conteúdo Interativo</span>
+                    <h2 class="card-title">Formatos de Unha: Almond, Stiletto, Quadrada e como escolher</h2>
+                    <p class="card-text">
+                        Cada formato se adapta melhor a um tipo de dedo. Descubra as características visuais de cada corte e encontre a simetria perfeita para alongar ou modernizar suas mãos.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-body">
+                    <span class="tag">Educação e Saúde</span>
+                    <h2 class="card-title">Os perigos de remover o alongamento em casa</h2>
+                    <p class="card-text">
+                        Arrancar ou lixar o gel/acrílico incorretamente danifica as camadas queratinizadas da unha natural, tornando-as finas e quebradiças.
+                    </p>
+                    <div class="alert-box">
+                        <p><strong>Aviso Importante:</strong> A remoção inadequada pode causar infiltrações e proliferação de fungos. Faça sempre o procedimento com uma profissional habilitada.</p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+</body>
+</html>
