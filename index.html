@@ -3,128 +3,421 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Women's Fashion Guide</title>
+
+<title>Kerollyn Malosti Fashion</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 body{
-    font-family: Arial, sans-serif;
-    background:#fafafa;
-    margin:0;
-    padding:40px;
-    color:#333;
+margin:0;
+font-family:Poppins,sans-serif;
+background:#F8F4EF;
+color:#333;
 }
 
-.container{
-    max-width:1100px;
-    margin:auto;
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+background:white;
+}
+
+.logo{
+font-size:28px;
+font-family:Playfair Display;
+letter-spacing:2px;
+}
+
+nav a{
+margin:0 18px;
+text-decoration:none;
+color:#222;
+font-size:15px;
+}
+
+.visit-btn{
+background:#CDA05B;
+padding:14px 26px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+display:flex;
+align-items:center;
+padding:80px 8%;
+gap:60px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.subtitle{
+color:#CDA05B;
+font-size:14px;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.hero h1{
+font-family:Playfair Display;
+font-size:70px;
+font-weight:500;
+line-height:1.1;
+margin:20px 0;
+}
+
+.highlight{
+color:#CDA05B;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.8;
+color:#666;
+max-width:550px;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+gap:20px;
+}
+
+.primary{
+background:#CDA05B;
+padding:16px 32px;
+border-radius:12px;
+color:white;
+text-decoration:none;
+}
+
+.secondary{
+padding:16px 32px;
+border:1px solid #CDA05B;
+border-radius:12px;
+text-decoration:none;
+color:#CDA05B;
+}
+
+.hero img{
+width:600px;
+border-radius:20px;
 }
 
 .section{
-    background:#fff;
-    padding:25px;
-    border-radius:16px;
-    margin-bottom:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+padding:90px 8%;
+text-align:center;
 }
 
-.section h2{
-    color:#b86b77;
-    margin-bottom:12px;
+.section-title{
+font-family:Playfair Display;
+font-size:50px;
+margin-bottom:60px;
 }
 
-.icons{
-    display:flex;
-    gap:15px;
-    margin-top:15px;
+.cards{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:25px;
 }
 
-.icon{
-    width:60px;
-    height:60px;
-    border-radius:12px;
-    background:#f3f3f3;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
+.card{
+background:white;
+padding:40px;
+border-radius:18px;
+box-shadow:0 4px 15px rgba(0,0,0,.05);
 }
 
-.brands{
-    margin-top:15px;
-    font-weight:bold;
-    color:#666;
+.card h3{
+font-size:22px;
+margin-top:15px;
 }
+
+.card p{
+font-size:14px;
+line-height:1.7;
+color:#666;
+}
+
+footer{
+background:white;
+padding:70px 8%;
+display:flex;
+justify-content:space-between;
+}
+
+.footer-title{
+font-size:18px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+footer a{
+display:block;
+margin-bottom:10px;
+color:#555;
+text-decoration:none;
+}
+
+.copy{
+background:#CDA05B;
+color:white;
+padding:20px;
+text-align:center;
+}
+
 </style>
 
 </head>
 <body>
 
-<div class="container">
+<header>
 
-    <!-- Accessories -->
-    <div class="section">
-        <h2>7. Accessories: The Power of Details</h2>
+<div class="logo">
+KEROLLYN MALOSTI
+</div>
 
-        <p>
-            Discover how to transform a simple outfit using only accessories.
-            Bags, belts, jewelry, and stylish details can instantly elevate
-            any look and add personality.
-        </p>
+<nav>
 
-        <div class="icons">
-            <div class="icon">👜</div>
-            <div class="icon">👑</div>
-            <div class="icon">💍</div>
-            <div class="icon">🎀</div>
-        </div>
-    </div>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Collections</a>
+<a href="#">Shop</a>
+<a href="#">News</a>
+<a href="#">Contact</a>
 
-    <!-- Elegant -->
-    <div class="section">
-        <h2>1. Chic and Elegant: Timeless Classic</h2>
+</nav>
 
-        <p>
-            Focus on structured pieces, tailored clothing, evening dresses,
-            and refined accessories. Perfect for women who appreciate
-            sophistication and elegance.
-        </p>
+<a class="visit-btn">
+Book Appointment
+</a>
 
-        <div class="brands">
-            Reference Brands:
-            Belle Boutique • Divina Dama • Elegance & Co. • La Mode Chic
-        </div>
-    </div>
+</header>
 
-    <!-- Romantic -->
-    <div class="section">
-        <h2>3. Romantic and Delicate: Femininity at Its Finest</h2>
+<section class="hero">
 
-        <p>
-            Lace, ruffles, floral prints, bows, pastel colors,
-            and flowing silhouettes create a soft and dreamy aesthetic.
-        </p>
+<div class="hero-text">
 
-        <div class="brands">
-            Reference Brands:
-            Flor de Lis • Doce Vestir • Sonho Rosa • Encanto
-        </div>
-    </div>
+<div class="subtitle">
+WOMEN'S FASHION • ELEGANCE & STYLE
+</div>
 
-    <!-- Minimalist -->
-    <div class="section">
-        <h2>2. Modern and Minimalist: Less is More</h2>
+<h1>
 
-        <p>
-            Clean lines, neutral tones, straight cuts,
-            and premium fabrics define this effortless style.
-            Inspired by the concept of quiet luxury for everyday life.
-        </p>
+Fashion that inspires,<br>
 
-        <div class="brands">
-            Reference Brands:
-            Aura • Lina • Sintonia • Traço
-        </div>
-    </div>
+<span class="highlight">
+
+beauty in every detail!
+
+</span>
+
+</h1>
+
+<p>
+
+Discover exclusive collections, current trends and pieces designed to highlight your personality with sophistication.
+
+</p>
+
+<div class="buttons">
+
+<a class="primary">
+View Collection
+</a>
+
+<a class="secondary">
+New Arrivals
+</a>
+
+</div>
+
+</div>
+
+<img src="hero-fashion.jpg">
+
+</section>
+
+<section class="section">
+
+<div class="subtitle">
+OUR COLLECTIONS
+</div>
+
+<h2 class="section-title">
+
+Pieces that celebrate your style
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Dresses</h3>
+
+<p>
+
+Elegant designs that enhance your beauty and femininity.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Bags</h3>
+
+<p>
+
+Sophistication and practicality for every occasion.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Accessories</h3>
+
+<p>
+
+Details that transform your entire look.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Shoes</h3>
+
+<p>
+
+Comfort and style designed to accompany you.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Jewelry</h3>
+
+<p>
+
+Delicate pieces that bring brilliance to your outfit.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="subtitle">
+ABOUT US
+</div>
+
+<h2 class="section-title">
+
+Passion for Women's Fashion
+
+</h2>
+
+<p style="max-width:700px;margin:auto;color:#666;line-height:1.8;">
+
+Kerollyn Malosti Fashion was born from the desire to bring elegance, authenticity and quality to women who appreciate refined style.
+
+Every collection is carefully selected to offer beauty, sophistication and timeless trends.
+
+</p>
+
+</section>
+
+<footer>
+
+<div>
+
+<div class="footer-title">
+
+KEROLLYN MALOSTI FASHION
+
+</div>
+
+<p>
+
+Women's fashion that expresses elegance and personality.
+
+</p>
+
+</div>
+
+<div>
+
+<div class="footer-title">
+
+Quick Links
+
+</div>
+
+<a>Home</a>
+<a>About</a>
+<a>Collections</a>
+<a>Shop</a>
+<a>News</a>
+
+</div>
+
+<div>
+
+<div class="footer-title">
+
+Contact
+
+</div>
+
+<a>(11) 98765-4321</a>
+
+<a>@kerollynmalosti.fashion</a>
+
+<a>São Paulo - Brazil</a>
+
+</div>
+
+<div>
+
+<div class="footer-title">
+
+Business Hours
+
+</div>
+
+<a>Monday – Friday</a>
+
+<a>09 AM – 07 PM</a>
+
+<a>Saturday</a>
+
+<a>09 AM – 03 PM</a>
+
+</div>
+
+</footer>
+
+<div class="copy">
+
+© 2026 Kerollyn Malosti Fashion. All rights reserved.
 
 </div>
 
