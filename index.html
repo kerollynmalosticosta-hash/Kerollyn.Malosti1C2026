@@ -1,289 +1,86 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nail Designer - Blog & Guia</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* Hero Header com overlay sutil e imagem de fundo profissional */
-        .hero {
-            background: linear-gradient(rgba(244, 63, 94, 0.3), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1604654894610-df490651e56c?q=80&w=1920') no-repeat center center/cover;
-            min-height: 80vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px 40px;
-            text-align: center;
-        }
-
-        /* Topbar de Navegação */
-        .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #fff;
-            letter-spacing: 1px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #f43f5e; /* Rosa em destaque no hover */
-        }
-
-        .btn-add {
-            background-color: #f43f5e; /* Botão Rosa */
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            transition: background 0.3s;
-        }
-
-        .btn-add:hover {
-            background-color: #e11d48;
-        }
-
-        /* Conteúdo Central alterado para "Nail Designer" */
-        .hero-content {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .hero-content h1 {
-            font-size: 56px;
-            font-weight: 800;
-            margin-bottom: 15px;
-            line-height: 1.2;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero-content p {
-            font-size: 18px;
-            color: #ffe4e6; /* Texto em tom rosa claro */
-            margin-bottom: 40px;
-        }
-
-        /* Barra de Pesquisa / Filtro */
-        .search-container {
-            background: white;
-            border-radius: 8px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 4px 20px rgba(244, 63, 94, 0.15);
-            max-width: 900px;
-            margin: 0 auto -40px auto;
-            position: relative;
-            z-index: 10;
-        }
-
-        .search-field {
-            flex: 1;
-            padding: 10px 15px;
-            border: none;
-            border-right: 1px solid #fecdd3; /* Borda rosa suave */
-            outline: none;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .search-field:last-of-type {
-            border-right: none;
-        }
-
-        .btn-search {
-            background-color: #ec4899; /* Botão Buscar em tom Rosa Pink */
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn-search:hover {
-            background-color: #db2777;
-        }
-
-        /* Seção Principal / Grid de Conteúdo */
-        .main-content {
-            background-color: #fff5f5; /* Fundo do site levemente rosado */
-            padding: 100px 40px 60px 40px;
-        }
-
-        .grid-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #fce7f3; /* Borda fina rosa sutil */
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(244, 63, 94, 0.1);
-        }
-
-        .card-body {
-            padding: 25px;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #fce7f3; /* Fundo da tag rosa claro */
-            color: #be185d; /* Texto da tag rosa escuro */
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .card-title {
-            font-size: 20px;
-            color: #1e293b;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .card-text {
-            color: #64748b;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Caixa de Alerta de Saúde */
-        .alert-box {
-            background-color: #fff1f2; /* Fundo do alerta rosa suave */
-            border-left: 4px solid #f43f5e; /* Borda esquerda rosa viva */
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .alert-box p {
-            color: #9f1239; /* Texto do alerta */
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 38px; }
-            .search-container { flex-direction: column; gap: 10px; margin-bottom: -60px; }
-            .search-field { border-right: none; border-bottom: 1px solid #fecdd3; width: 100%; }
-            .btn-search { width: 100%; }
-            .topbar { flex-direction: column; gap: 15px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilos de Moda</title>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="topbar">
-            <div class="logo">NailStyle.</div>
-            <nav class="nav-links">
-                <a href="#">Início</a>
-                <a href="#">Explorar</a>
-                <a href="#">Tendências</a>
-                <a href="#" class="btn-add">Agendar Horário</a>
-            </nav>
-        </div>
+  <section class="fashion-styles">
+    <h1>Estilos de Moda</h1>
 
-        <div class="hero-content">
-            <h1>Nail Designer</h1>
-            <p>Descubra técnicas, formatos, cuidados cruciais e as principais tendências que estão bombando nas redes.</p>
-        </div>
-    </header>
+    <article class="style-card">
+      <h2>1. Chiques e Elegantes: O Clássico Atemporal</h2>
+      <p>
+        Peças estruturadas, alfaiataria, vestidos de festa e acessórios refinados.
+        Um estilo marcado pela sofisticação, elegância e atemporalidade.
+      </p>
 
-    <div class="search-container">
-        <input type="text" class="search-field" placeholder="O que você está procurando? (Ex: Formatos, Cuidados)">
-        <input type="text" class="search-field" placeholder="Categoria de Art / Estilo">
-        <button class="btn-search">Buscar Guia</button>
-    </div>
+      <h3>Marcas de referência</h3>
+      <ul>
+        <li>Belle Boutique</li>
+        <li>Divina Dama</li>
+        <li>Elegance &amp; Co.</li>
+        <li>La Mode Chic</li>
+      </ul>
+    </article>
 
-    <main class="main-content">
-        <div class="grid-container">
+    <hr>
 
-            <article class="card">
-                <div class="card-body">
-                    <span class="tag">Página Sobre / Fixo</span>
-                    <h2 class="card-title">O que faz uma Nail Designer? (Guia para Iniciantes)</h2>
-                    <p class="card-text">
-                        Entenda o diferencial profissional: muito além da manicure tradicional, a designer de unhas é especialista em alongamentos avançados, aplicação de nail art personalizada e visagismo das mãos para harmonizar com o seu estilo.
-                    </p>
-                </div>
-            </article>
+    <article class="style-card">
+      <h2>2. Modernos e Minimalistas: Menos é Mais</h2>
+      <p>
+        Looks com base clean, cores neutras, cortes retos e tecidos nobres,
+        valorizando a simplicidade e a qualidade. Inspirado no conceito de
+        <em>quiet luxury</em> para o dia a dia.
+      </p>
 
-            <article class="card">
-                <div class="card-body">
-                    <span class="tag">Tendências Redes Sociais</span>
-                    <h2 class="card-title">Tendências de Nail Art que estão bombando nas redes</h2>
-                    <p class="card-text">
-                        Espaço altamente visual ideal para carrosséis de fotos. Explore paletas de cores vibrantes, efeitos cromados, texturas 3D e artes minimalistas que atraem o público jovem e antenado.
-                    </p>
-                </div>
-            </article>
+      <h3>Marcas de referência</h3>
+      <ul>
+        <li>Aura</li>
+        <li>Lina</li>
+        <li>Sintonia</li>
+        <li>Traço</li>
+      </ul>
+    </article>
 
-            <article class="card">
-                <div class="card-body">
-                    <span class="tag">Conteúdo Interativo</span>
-                    <h2 class="card-title">Formatos de Unha: Almond, Stiletto, Quadrada e como escolher</h2>
-                    <p class="card-text">
-                        Cada formato se adapta melhor a um tipo de dedo. Descubra as características visuais de cada corte e encontre a simetria perfeita para alongar ou modernizar suas mãos.
-                    </p>
-                </div>
-            </article>
+    <hr>
 
-            <article class="card">
-                <div class="card-body">
-                    <span class="tag">Educação e Saúde</span>
-                    <h2 class="card-title">Os perigos de remover o alongamento em casa</h2>
-                    <p class="card-text">
-                        Arrancar ou lixar o gel/acrílico incorretamente danifica as camadas queratinizadas da unha natural, tornando-as finas e quebradiças.
-                    </p>
-                    <div class="alert-box">
-                        <p><strong>Aviso Importante:</strong> A remoção inadequada pode causar infiltrações e proliferação de fungos. Faça sempre o procedimento com uma profissional habilitada.</p>
-                    </div>
-                </div>
-            </article>
+    <article class="style-card">
+      <h2>3. Românticos e Delicados: Feminino na Essência</h2>
+      <p>
+        Rendas, babados, estampas florais, laços, tons pastel e silhuetas fluidas
+        compõem um visual delicado, leve e feminino.
+      </p>
 
-        </div>
-    </main>
+      <h3>Marcas de referência</h3>
+      <ul>
+        <li>Flor de Lis</li>
+        <li>Doce Vestir</li>
+        <li>Sonho Rosa</li>
+        <li>Encanto</li>
+      </ul>
+    </article>
+
+    <hr>
+
+    <article class="style-card">
+      <h2>7. Acessórios: O Poder dos Detalhes</h2>
+      <p>
+        Descubra como transformar um look básico utilizando apenas acessórios
+        como bolsas, cintos, joias, lenços e óculos.
+      </p>
+
+      <p>
+        Este tema destaca a importância dos detalhes na composição do visual
+        e é ideal para treinar o uso de ícones e imagens em miniatura.
+      </p>
+    </article>
+
+  </section>
 
 </body>
 </html>
+```
