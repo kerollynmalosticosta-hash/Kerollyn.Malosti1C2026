@@ -1,24 +1,130 @@
-<section class="hero">
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;500&display=swap');
 
-    <div class="hero-content">
+body{
+    margin:0;
+    background:#F7F2EB;
+}
 
-        <span class="year">2026</span>
+.hero{
 
-        <h1>
-            NEW<br>
-            COLLECTION
-        </h1>
+    height:100vh;
 
-        <div class="line"></div>
+    display:flex;
+    align-items:center;
 
-        <p>
-            Timeless. Authentic. Feminine.
-        </p>
+    padding-left:8%;
 
-        <a href="#" class="btn">
-            SHOP NOW
-        </a>
+    background:
+    linear-gradient(
+    rgba(247,242,235,.78),
+    rgba(247,242,235,.78)),
 
-    </div>
+    url("fashion-model.jpg");
 
-</section>
+    background-size:cover;
+    background-position:center;
+
+}
+
+.hero-content{
+
+    max-width:520px;
+
+}
+
+.year{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:60px;
+
+    color:#B39272;
+
+    letter-spacing:4px;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:96px;
+
+    font-weight:300;
+
+    color:#5E3A22;
+
+    line-height:0.95;
+
+    margin:20px 0;
+
+}
+
+.line{
+
+    width:220px;
+    height:1px;
+
+    background:#8A6A4E;
+
+    margin:35px 0;
+
+}
+
+.hero p{
+
+    font-family:'Montserrat';
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    color:#5D4734;
+
+    text-transform:uppercase;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    background:#5A3315;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Montserrat';
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#744929;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:62px;
+
+}
+
+.year{
+
+font-size:42px;
+
+}
+
+}
