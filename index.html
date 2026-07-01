@@ -1,147 +1,145 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <title>Kerollyn Malosti Fashion</title>
 
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-
-body{
+*{
 margin:0;
-font-family:Poppins,sans-serif;
-background:#F8F4EF;
-color:#333;
+padding:0;
+box-sizing:border-box;
 }
 
+body{
+font-family:Inter,sans-serif;
+background:#faf8f4;
+color:#2d2d2d;
+}
+
+.container{
+width:90%;
+max-width:1400px;
+margin:auto;
+}
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 8%;
-background:white;
+padding:30px 0;
 }
 
-
-.logo{
-font-size:28px;
-font-family:Playfair Display;
-letter-spacing:2px;
+.logo h1{
+font-family:"Cormorant Garamond",serif;
+font-size:32px;
+font-weight:600;
 }
 
+.logo span{
+letter-spacing:4px;
+font-size:13px;
+color:#b28a54;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
 
 nav a{
-margin:0 18px;
 text-decoration:none;
-color:#222;
+color:#333;
 font-size:15px;
 }
 
-
-.visit-btn{
-background:#CDA05B;
-padding:14px 26px;
-border-radius:10px;
+.button{
+background:#c79a58;
 color:white;
+padding:14px 28px;
+border-radius:12px;
 text-decoration:none;
-font-weight:500;
+font-weight:600;
 }
-
 
 .hero{
-display:flex;
+display:grid;
+grid-template-columns:1fr 1fr;
 align-items:center;
-padding:80px 8%;
 gap:60px;
+padding:60px 0;
 }
 
-
-.hero-text{
-flex:1;
-}
-
-
-.subtitle{
-color:#CDA05B;
-font-size:14px;
+.hero-text small{
+color:#b28a54;
 letter-spacing:2px;
-text-transform:uppercase;
+font-weight:600;
 }
 
-
-.hero h1{
-font-family:Playfair Display;
-font-size:70px;
-font-weight:500;
+.hero-text h2{
+font-family:"Cormorant Garamond",serif;
+font-size:72px;
+font-weight:600;
 line-height:1.1;
 margin:20px 0;
 }
 
-
 .highlight{
-color:#CDA05B;
+color:#c79a58;
 }
 
-
-.hero p{
+.hero-text p{
 font-size:18px;
 line-height:1.8;
 color:#666;
-max-width:550px;
+margin-bottom:30px;
 }
 
-
 .buttons{
-margin-top:35px;
 display:flex;
 gap:20px;
 }
 
-
-.primary{
-background:#CDA05B;
-padding:16px 32px;
-border-radius:12px;
-color:white;
-text-decoration:none;
-}
-
-
 .secondary{
-padding:16px 32px;
-border:1px solid #CDA05B;
+border:1px solid #c79a58;
+padding:14px 28px;
 border-radius:12px;
 text-decoration:none;
-color:#CDA05B;
+color:#b28a54;
 }
-
 
 .hero img{
-width:600px;
+width:100%;
 border-radius:20px;
 }
 
-
 .section{
-padding:90px 8%;
-text-align:center;
+padding:100px 0;
 }
 
-
 .section-title{
-font-family:Playfair Display;
-font-size:50px;
+text-align:center;
 margin-bottom:60px;
 }
 
+.section-title span{
+color:#b28a54;
+letter-spacing:3px;
+font-size:13px;
+}
+
+.section-title h3{
+font-size:58px;
+font-family:"Cormorant Garamond",serif;
+margin-top:10px;
+}
 
 .cards{
 display:grid;
@@ -149,360 +147,341 @@ grid-template-columns:repeat(5,1fr);
 gap:25px;
 }
 
-
 .card{
 background:white;
 padding:40px;
-border-radius:18px;
-box-shadow:0 4px 15px rgba(0,0,0,.05);
+border-radius:20px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,0.04);
 }
 
-
-.card h3{
+.card h4{
+margin:20px 0 10px;
 font-size:22px;
-margin-top:15px;
 }
-
 
 .card p{
-font-size:14px;
-line-height:1.7;
 color:#666;
+font-size:14px;
+line-height:1.6;
 }
 
-
-footer{
-background:white;
-padding:70px 8%;
-display:flex;
-justify-content:space-between;
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
+.about img{
+width:100%;
+border-radius:20px;
+}
 
-.footer-title{
-font-size:18px;
-font-weight:600;
+.about h3{
+font-family:"Cormorant Garamond",serif;
+font-size:54px;
 margin-bottom:20px;
 }
 
-
-footer a{
-display:block;
-margin-bottom:10px;
-color:#555;
-text-decoration:none;
+.about p{
+line-height:1.9;
+color:#666;
+margin-bottom:30px;
 }
 
+.gallery{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:15px;
+margin-top:40px;
+}
 
-.copy{
-background:#CDA05B;
-color:white;
-padding:20px;
+.gallery img{
+width:100%;
+border-radius:14px;
+}
+
+footer{
+background:#f4efe8;
+padding:70px 0;
+margin-top:80px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:40px;
+}
+
+.footer-grid h4{
+margin-bottom:20px;
+font-size:18px;
+}
+
+.footer-grid ul{
+list-style:none;
+}
+
+.footer-grid li{
+margin-bottom:12px;
+color:#666;
+}
+
+.copyright{
 text-align:center;
+padding-top:40px;
+font-size:14px;
+color:#888;
 }
-
 
 </style>
 
-
 </head>
+
 <body>
 
+<div class="container">
 
 <header>
 
-
 <div class="logo">
-KEROLLYN MALOSTI
+<h1>KEROLLYN MALOSTI</h1>
+<span>FASHION</span>
 </div>
 
-
 <nav>
-
-
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Collections</a>
-<a href="#">Shop</a>
-<a href="#">News</a>
-<a href="#">Contact</a>
-
-
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Collections</a></li>
+<li><a href="#">Shop</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 </nav>
 
-
-<a class="visit-btn">
-Book Appointment
+<a class="button" href="#">
+Schedule Visit
 </a>
-
 
 </header>
 
 
 <section class="hero">
 
-
 <div class="hero-text">
 
+<small>WOMEN'S FASHION • ELEGANCE & STYLE</small>
 
-<div class="subtitle">
-WOMEN'S FASHION • ELEGANCE & STYLE
-</div>
-
-
-<h1>
-
-
-Fashion that inspires,<br>
-
-
+<h2>
+Fashion that inspires,
 <span class="highlight">
-
-
 beauty in every detail!
-
-
 </span>
-
-
-</h1>
-
+</h2>
 
 <p>
-
-
-Discover exclusive collections, current trends and pieces designed to highlight your personality with sophistication.
-
-
+Discover exclusive collections, current trends and timeless pieces designed to enhance your personality with sophistication.
 </p>
-
 
 <div class="buttons">
 
-
-<a class="primary">
+<a href="#" class="button">
 View Collection
 </a>
 
-
-<a class="secondary">
+<a href="#" class="secondary">
 New Arrivals
 </a>
 
+</div>
 
 </div>
 
-
-</div>
-
-
-<img src="hero-fashion.jpg">
-
+<img src="fashion-model.jpg">
 
 </section>
 
 
+
 <section class="section">
 
+<div class="section-title">
 
-<div class="subtitle">
-OUR COLLECTIONS
+<span>OUR COLLECTIONS</span>
+
+<h3>Pieces that value your style</h3>
+
 </div>
-
-
-<h2 class="section-title">
-
-
-Pieces that celebrate your style
-
-
-</h2>
-
 
 <div class="cards">
 
+<div class="card">
+<h4>Dresses</h4>
+<p>Elegant designs that highlight beauty and femininity.</p>
+</div>
 
 <div class="card">
-
-
-<h3>Dresses</h3>
-
-
-<p>
-
-
-Elegant designs that enhance your beauty and femininity.
-
-
-</p>
-
-
+<h4>Bags</h4>
+<p>Sophistication and practicality for every moment.</p>
 </div>
-
 
 <div class="card">
-
-
-<h3>Bags</h3>
-
-
-<p>
-
-
-Sophistication and practicality for every occasion.
-
-
-</p>
-
-
+<h4>Accessories</h4>
+<p>Details that transform your entire look.</p>
 </div>
-
 
 <div class="card">
-
-
-<h3>Accessories</h3>
-
-
-<p>
-
-
-Details that transform your entire look.
-
-
-</p>
-
-
+<h4>Shoes</h4>
+<p>Comfort and style for modern women.</p>
 </div>
-
 
 <div class="card">
-
-
-<h3>Shoes</h3>
-
-
-<p>
-
-
-Comfort and style designed to accompany you.
-
-
-</p>
-
-
+<h4>Jewelry</h4>
+<p>Delicate and luxurious finishing touches.</p>
 </div>
 
-
-<div class="card">
-
-
-<h3>Jewelry</h3>
-
-
-<p>
-
-
-Delicate pieces that bring brilliance to your outfit.
-
-
-</p>
-
-
 </div>
-
-
-</div>
-
 
 </section>
+
+
+
+<section class="section about">
+
+<img src="luxury-bag.jpg">
+
+<div>
+
+<span style="color:#b28a54;">
+ABOUT US
+</span>
+
+<h3>Passion for women's fashion</h3>
+
+<p>
+
+Kerollyn Malosti Fashion was born from the desire to bring elegance, authenticity and quality to women who love dressing beautifully.
+
+Every piece is selected with care to offer sophistication and timeless style.
+
+</p>
+
+<a class="button">
+Learn More
+</a>
+
+</div>
+
+</section>
+
 
 
 <section class="section">
 
+<div class="section-title">
 
-<div class="subtitle">
-ABOUT US
+<span>FOLLOW US ON INSTAGRAM</span>
+
+<h3>Inspirations for you</h3>
+
 </div>
 
+<div class="gallery">
 
-<h2 class="section-title">
+<img src="bag.jpg">
+<img src="dress.jpg">
+<img src="jewelry.jpg">
+<img src="model.jpg">
+<img src="heels.jpg">
+<img src="fashion.jpg">
+<img src="necklace.jpg">
 
-
-Passion for Women's Fashion
-
-
-</h2>
-
-
-<p style="max-width:700px;margin:auto;color:#666;line-height:1.8;">
-
-
-Kerollyn Malosti Fashion was born from the desire to bring elegance, authenticity and quality to women who appreciate refined style.
-
-
-Every collection is carefully selected to offer beauty, sophistication and timeless trends.
-
-
-</p>
-
+</div>
 
 </section>
+
+
+</div>
+
 
 
 <footer>
 
+<div class="container">
+
+<div class="footer-grid">
 
 <div>
 
+<h1 style="font-family:Cormorant Garamond;">
+KEROLLYN MALOSTI
+</h1>
 
-<div class="footer-title">
-
-
-KEROLLYN MALOSTI FASHION
-
-
-</div>
-
-
-<p>
-
-
-Women's fashion that expresses elegance and personality.
-
-
+<p style="margin-top:15px;color:#666;">
+Women's fashion expressing elegance,
+beauty and authenticity.
 </p>
 
-
 </div>
-
 
 <div>
 
+<h4>Quick Links</h4>
 
-<div class="footer-title">
+<ul>
 
+<li>Home</li>
+<li>About</li>
+<li>Collections</li>
+<li>Shop</li>
+<li>News</li>
 
-Quick Links
-
-
-</div>
-
-
-<a>Home</a>
-<a>About</a>
-<a>Collections</a>
-<a>Shop</a>
-<a>News</a>
-
+</ul>
 
 </div>
-
 
 <div>
 
+<h4>Contact</h4>
 
-<div class="footer-title">
+<ul>
 
+<li>(11) 98765-4321</li>
+<li>@kerollynmalosti.fashion</li>
+<li>São Paulo - Brazil</li>
 
-Contact
+</ul>
+
+</div>
+
+<div>
+
+<h4>Service Hours</h4>
+
+<ul>
+
+<li>Monday – Friday</li>
+<li>09:00 AM – 07:00 PM</li>
+<li>Saturday</li>
+<li>09:00 AM – 03:00 PM</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Kerollyn Malosti Fashion. All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
